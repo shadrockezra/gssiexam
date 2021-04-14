@@ -1,0 +1,1 @@
+SELECT * FROM employees WHERE salary_id = 3

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id="jso"></p>
+<h1>Contact Form</h1>
+<input type="text" placeholder="Last Name" id="lastName" />
+<br><br>
+<input type="text" placeholder="First Name" id="firstName" />
+<br><br>
+<input type="date" placeholder="Birthday" id="birthday" />
+<br><br>
+<input type="radio" id="male" name="gender" value="male"> Male
+<input type="radio" id="female" name="gender" value="female"> Female
+<br><br>
+<input type="checkbox" id="language1" name="eng" value="English">
+<label for="language1"> English</label><br>
+<input type="checkbox" id="language2" name="jap" value="Japanese">
+<label for="language2"> Japanese</label><br>
+<input type="checkbox" id="Chinese" name="chi" value="Chinese">
+<label for="language3"> Chinese</label><br><br>
+<script>
+var txt = '
+{
+ "success":true,
+ "employees":[
+ {
+ "id":"1",
+ "firstName":"John",
+ "lastName":"Doe",
+ "birthday":"1990-05-07",
+ "gender":{
+ "male":true,
+ "female":false
+ },
+ "knownLanguage":[
+ "English",
+ "Japanese",
+ "Chinese"
+ ]
+ },
+ {
+ "id":"2",
+ "firstName":"Lina",
+ "lastName":"Art",
+ "birthday":"1994-08-05",
+ "gender":{
+ "male":false,
+ "female":true
+ },
+ "knownLanguage":[
+ "English",
+ "Japanese"
+ ]
+ }
+ ]
+}'
+//Attempt at parsing json values 
+var obj = JSON.parse(txt);
+document.getElementById("jso").innerHTML = obj.firstName;
+</script>
+
+</body>
+</html>
